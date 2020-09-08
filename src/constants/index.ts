@@ -3,7 +3,7 @@ import { AbstractConnector } from '@web3-react/abstract-connector'
 
 import { fortmatic, injected, portis, walletconnect, walletlink } from '../connectors'
 
-export const ROUTER_ADDRESS = '0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D'
+export const ROUTER_ADDRESS = '0x11bdf0b08a714b34be1ed0b0472f054a053cbe2d'
 
 // a list of tokens by chain
 type ChainTokenList = {
@@ -16,6 +16,34 @@ export const USDT = new Token(ChainId.MAINNET, '0xdAC17F958D2ee523a2206206994597
 export const COMP = new Token(ChainId.MAINNET, '0xc00e94Cb662C3520282E6f5717214004A7f26888', 18, 'COMP', 'Compound')
 export const MKR = new Token(ChainId.MAINNET, '0x9f8F72aA9304c8B593d555F12eF6589cC3A579A2', 18, 'MKR', 'Maker')
 export const AMPL = new Token(ChainId.MAINNET, '0xD46bA6D942050d489DBd938a2C909A5d5039A161', 9, 'AMPL', 'Ampleforth')
+export const WEENUS = new Token(
+  ChainId.RINKEBY,
+  '0xaFF4481D10270F50f203E0763e2597776068CBc5',
+  18,
+  'WEENUS',
+  'WEENUS 💪'
+)
+export const XEENUS = new Token(
+  ChainId.RINKEBY,
+  '0x022E292b44B5a146F2e8ee36Ff44D3dd863C915c',
+  18,
+  'XEENUS',
+  'XEENUS 💪'
+)
+export const YEENUS = new Token(
+  ChainId.RINKEBY,
+  '0xc6fDe3FD2Cc2b173aEC24cc3f267cb3Cd78a26B7',
+  18,
+  'YEENUS',
+  'YEENUS 💪'
+)
+export const ZEENUS = new Token(
+  ChainId.RINKEBY,
+  '0x1f9061B953bBa0E36BF50F21876132DcF276fC6e',
+  18,
+  'ZEENUS',
+  'ZEENUS 💪'
+)
 
 const WETH_ONLY: ChainTokenList = {
   [ChainId.MAINNET]: [WETH[ChainId.MAINNET]],
@@ -28,7 +56,8 @@ const WETH_ONLY: ChainTokenList = {
 // used to construct intermediary pairs for trading
 export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
   ...WETH_ONLY,
-  [ChainId.MAINNET]: [...WETH_ONLY[ChainId.MAINNET], DAI, USDC, USDT, COMP, MKR]
+  [ChainId.MAINNET]: [...WETH_ONLY[ChainId.MAINNET], DAI, USDC, USDT, COMP, MKR],
+  [ChainId.RINKEBY]: [...WETH_ONLY[ChainId.RINKEBY], WEENUS, XEENUS, YEENUS, ZEENUS]
 }
 
 /**
@@ -44,13 +73,15 @@ export const CUSTOM_BASES: { [chainId in ChainId]?: { [tokenAddress: string]: To
 // used for display in the default list when adding liquidity
 export const SUGGESTED_BASES: ChainTokenList = {
   ...WETH_ONLY,
-  [ChainId.MAINNET]: [...WETH_ONLY[ChainId.MAINNET], DAI, USDC, USDT]
+  [ChainId.MAINNET]: [...WETH_ONLY[ChainId.MAINNET], DAI, USDC, USDT],
+  [ChainId.RINKEBY]: [...WETH_ONLY[ChainId.RINKEBY], WEENUS, XEENUS, YEENUS, ZEENUS]
 }
 
 // used to construct the list of all pairs we consider by default in the frontend
 export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
   ...WETH_ONLY,
-  [ChainId.MAINNET]: [...WETH_ONLY[ChainId.MAINNET], DAI, USDC, USDT]
+  [ChainId.MAINNET]: [...WETH_ONLY[ChainId.MAINNET], DAI, USDC, USDT],
+  [ChainId.RINKEBY]: [...WETH_ONLY[ChainId.RINKEBY], WEENUS, XEENUS, YEENUS, ZEENUS]
 }
 
 export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } = {
@@ -61,7 +92,8 @@ export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } 
     ],
     [USDC, USDT],
     [DAI, USDT]
-  ]
+  ],
+  [ChainId.MAINNET]: [[WEENUS, XEENUS]]
 }
 
 export interface WalletInfo {
