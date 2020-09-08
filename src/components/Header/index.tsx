@@ -5,10 +5,8 @@ import { Text } from 'rebass'
 
 import styled from 'styled-components'
 
-import Logo from '../../assets/svg/logo.svg'
-import LogoDark from '../../assets/svg/logo_white.svg'
-import Wordmark from '../../assets/svg/wordmark.svg'
-import WordmarkDark from '../../assets/svg/wordmark_white.svg'
+import KanWhite from '../../assets/svg/kan_white.svg'
+import KanBlack from '../../assets/svg/kan_black.svg'
 import { useActiveWeb3React } from '../../hooks'
 import { useDarkModeManager } from '../../state/user/hooks'
 import { useETHBalances } from '../../state/wallet/hooks'
@@ -97,18 +95,6 @@ const NetworkCard = styled(YellowCard)`
   padding: 8px 12px;
 `
 
-const UniIcon = styled.div`
-  transition: transform 0.3s ease;
-  :hover {
-    transform: rotate(-5deg);
-  }
-  ${({ theme }) => theme.mediaWidth.upToSmall`
-    img { 
-      width: 4.5rem;
-    }
-  `};
-`
-
 const HeaderControls = styled.div`
   display: flex;
   flex-direction: row;
@@ -145,11 +131,8 @@ export default function Header() {
       <RowBetween style={{ alignItems: 'flex-start' }} padding="1rem 1rem 0 1rem">
         <HeaderElement>
           <Title href=".">
-            <UniIcon>
-              <img src={isDark ? LogoDark : Logo} alt="logo" />
-            </UniIcon>
             <TitleText>
-              <img style={{ marginLeft: '4px', marginTop: '4px' }} src={isDark ? WordmarkDark : Wordmark} alt="logo" />
+              <img style={{ marginLeft: '4px', marginTop: '4px' }} src={isDark ? KanWhite : KanBlack} alt="kanswap" />
             </TitleText>
           </Title>
         </HeaderElement>
