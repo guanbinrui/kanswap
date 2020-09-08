@@ -14,10 +14,8 @@
 
 ### TEST ERC20 Tokens
 
-- WEENUS: 0xaFF4481D10270F50f203E0763e2597776068CBc5
-- XEENUS: 0x022E292b44B5a146F2e8ee36Ff44D3dd863C915c
-- YEENUS: 0xc6fDe3FD2Cc2b173aEC24cc3f267cb3Cd78a26B7
-- ZEENUS: 0x1f9061B953bBa0E36BF50F21876132DcF276fC6e
+- KAN: [0x5c254f2481d70d1bf4f0c43cb923aa14cd62075a](https://rinkeby.etherscan.io/token/0x5c254f2481d70d1bf4f0c43cb923aa14cd62075a)
+- KAN2: [0x5b6a7cfca79ee09b4f154fd1c7ed7e1f5ff796d7](https://rinkeby.etherscan.io/token/0x5b6a7cfca79ee09b4f154fd1c7ed7e1f5ff796d7)
 
 ## Accessing the Uniswap Interface
 
