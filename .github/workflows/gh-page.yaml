@@ -1,0 +1,27 @@
+name: github pages
+
+on:
+  push:
+    branches:
+      - master # Set a branch name to trigger deployment
+
+jobs:
+  deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
+
+      - name: Install
+        run: yarn install
+
+      - name: Build
+        run: yarn build
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: 64b080fc7efc404d79a25836036cfda1e8b4376d
+          publish_dir: ./public
