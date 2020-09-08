@@ -14,6 +14,22 @@ An open source interface for Uniswap -- a protocol for decentralized exchange of
 - Discord: [Uniswap](https://discord.gg/Y7TF6QA)
 - Whitepaper: [Link](https://hackmd.io/C-DvwDSfSxuh-Gd4WKE_ig)
 
+## Deployment
+
+### Address
+
+- Owner Address: 0xB5b32B39863C7c2a84d3592237e1A79798020E92
+- Factory Address: 0xd5d723882d9f2d8e02506f4413e82f5b7b39f888
+- WETH Address: 0xe9a31ae67302ca172c426e2cd8a1878006dff026
+- Router Address: 0x11bdf0b08a714b34be1ed0b0472f054a053cbe2d
+
+### TEST ERC20 Tokens
+
+- WEENUS: 0xaFF4481D10270F50f203E0763e2597776068CBc5
+- XEENUS: 0x022E292b44B5a146F2e8ee36Ff44D3dd863C915c
+- YEENUS: 0xc6fDe3FD2Cc2b173aEC24cc3f267cb3Cd78a26B7
+- ZEENUS: 0x1f9061B953bBa0E36BF50F21876132DcF276fC6e
+
 ## Accessing the Uniswap Interface
 
 To access the Uniswap Interface, use an IPFS gateway link from the
@@ -25,13 +41,6 @@ or visit [app.uniswap.org](https://app.uniswap.org).
 Please see the
 [@uniswap/default-token-list](https://github.com/uniswap/default-token-list)
 repository.
-
-## About thie Depoly
-
-- Owner Address: 0xB5b32B39863C7c2a84d3592237e1A79798020E92
-- Factory Address: 0xd5d723882d9f2d8e02506f4413e82f5b7b39f888
-- WETH Address: 0xe9a31ae67302ca172c426e2cd8a1878006dff026
-- Router Address: 0x11bdf0b08a714b34be1ed0b0472f054a053cbe2d
 
 ## Development
 
