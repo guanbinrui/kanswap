@@ -14,8 +14,8 @@
 
 ### TEST ERC20 Tokens
 
-- KAN: [0xA310Fb561F7adf91723a62006a91d113FB77F039](https://rinkeby.etherscan.io/token/0xA310Fb561F7adf91723a62006a91d113FB77F039)
-- KAN2: [0xdbddfb7efd1213ab860c128c3b7c78263fc025eb](https://rinkeby.etherscan.io/token/0xdbddfb7efd1213ab860c128c3b7c78263fc025eb)
+- KAN: [0xb262606fafaE30D593d7DB6bf829A3A567391713](https://rinkeby.etherscan.io/token/0xb262606fafaE30D593d7DB6bf829A3A567391713)
+- KAN2: [0x6EA7F804219995e9D71F02a292Ba48ab1f6A18E8](https://rinkeby.etherscan.io/token/0x6EA7F804219995e9D71F02a292Ba48ab1f6A18E8)
 
 ## Accessing the Uniswap Interface
 
